@@ -1,0 +1,78 @@
+.menu{
+    display: inline;
+}
+
+
+
+ a:hover{
+    background-color: #185fac;
+}
+
+img {
+    max-width: 100%;
+    width:100px;
+    height:100px;
+}
+
+
+
+.w3-red{
+    background-color: brown;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .container-fluide {
+      min-width: 1400px; 
+    }
+    mat-toolbar{
+      min-width: 1100px; 
+  }
+    mat-toolbar-row{
+     min-width: 1100px; 
+     margin-left: 0px;
+  }
+  a [mat-tab-link]{
+    min-width: 100px;
+   }
+   nav{
+    min-width: 1100px;
+  }
+  }
+  @media (min-width: 992px) {
+    .container-fluide {
+      min-width: 1900px; 
+    }
+    mat-toolbar{
+      min-width: 1450px;
+  }
+    mat-toolbar-row{
+      min-width: 1450px; 
+  }
+  a [mat-tab-link]{
+    min-width: 100px;
+  }
+  nav{
+    min-width: 1450px;
+  }
+  }
+  @media (min-width: 1200px) {
+    .container-fluide {
+      min-width: 1900px; 
+    }
+    mat-toolbar{
+      min-width: 1700px;  
+  }
+    mat-toolbar-row{
+      min-width: 1700px; 
+  }
+  a [mat-tab-link]{
+    min-width: 100px;
+  }
+  nav{
+    min-width: 1700px;
+  }
+
+  }

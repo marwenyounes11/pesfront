@@ -1,0 +1,23 @@
+
+@media (min-width: 768px) {
+  
+  .contenu{
+    max-width: 900px;
+}
+  }
+  @media (min-width: 992px) {
+    
+    .contenu{
+        max-width: 1450px;
+       
+    }
+    
+  }
+  @media (min-width: 1200px) {
+   
+    .contenu{
+       
+        max-width: 1700px;
+    }
+    
+  }

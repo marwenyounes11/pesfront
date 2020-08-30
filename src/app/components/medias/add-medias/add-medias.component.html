@@ -1,0 +1,52 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        
+    </div>
+    <div>
+    <h1>Gestion Medias</h1> 
+    </div>
+</mat-toolbar>
+
+    <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+      
+     
+      <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type"  required>
+          <mat-option value="evenement">
+           evenement
+           </mat-option>
+           <mat-option value="atelier">
+            atelier
+          </mat-option>
+          <mat-option value="press">
+              press
+          </mat-option>
+        </mat-select>
+        <mat-error
+        *ngIf="this.crudApi.dataForm.controls.type?.invalid && (this.crudApi.dataForm.controls.type.dirty || this.crudApi.dataForm.controls.type.touched)">
+        <div *ngIf="this.crudApi.dataForm.controls.type.errors.required">
+          Type obligatoire
+        </div>
+        </mat-error>
+      </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>Titre</mat-label>
+        <input matInput type="text" placeholder="taper le titre" formControlName="titre" id="titre">
+      </mat-form-field>
+     <br>
+    <div class="form-group">
+      <label>Ajouter Image  </label> <br>
+          <input type="file" accept="image/*" (change)="onSelectFile($event)"> <br>
+          <img  [src]="imgURL" height="200" *ngIf="imgURL">
+    </div>   
+    </mat-card-content>
+    <br>
+    <br>
+    <mat-card-actions align="center">
+        <button type="submit" class="btn btn-dark"><mat-icon>send</mat-icon> Submit</button>
+        <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>
+    </mat-card-actions>
+    </form>

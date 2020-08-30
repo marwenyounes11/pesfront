@@ -1,0 +1,55 @@
+strong{
+font-size: 14px; 
+font-family: verdana, geneva, sans-serif; 
+text-align: justify;
+ color: rgb(165, 42, 42);
+}
+h1{
+    margin: 20px 20px 20px 20px;
+    width: 100%;
+    justify-content: center;
+}
+mat-icon{
+    padding-right: 15px;
+    
+}
+
+
+@media (min-width: 768px) {
+    .container-fluide {
+      min-width: 1400px; 
+    }
+    mat-card{
+        margin-right: 100px;  
+        margin-bottom: 100px;  
+        min-width: 300px; 
+        min-height: 200px;  
+
+    }
+  }
+  @media (min-width: 992px) {
+    .container-fluide {
+      min-width: 1700px; 
+    }
+    mat-card{
+        margin-right: 100px;  
+        margin-bottom: 100px;  
+        min-width: 400px; 
+        min-height: 300px; 
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-fluide {
+      min-width: 1900px; 
+    }
+   
+    mat-card{
+        margin-right: 100px;  
+        margin-bottom: 100px;  
+        min-width: 600px; 
+        min-height: 500px; 
+    }
+    .c{ 
+        min-width: 1900px; 
+    }
+  }

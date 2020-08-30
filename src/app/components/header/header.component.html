@@ -1,0 +1,106 @@
+<html>
+<head>
+  
+
+</head>
+
+<body>
+
+  
+    
+  <div class="container-fluide">
+    <div class="row">
+        <div class="col-md-4 ">
+        <div class="col-xs-4 ">
+           <img class="card-img-top img-responsive m1" src="assets/images/logo-Elan.png">
+        </div>
+        </div>
+      <div class="col-md-4 ">
+        <div class="col-xs-4 ">
+        <img class="card-img-top img-responsive m2" src="assets/images/connect.png">
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="col-xs-4">
+        <img class="card-img-top img-responsive m3" src="assets/images/logo PES.png">
+      </div>
+      </div>
+
+    </div>
+
+    
+    <mat-toolbar >
+  <mat-toolbar-row class=" tabs">
+   
+            <nav mat-tab-nav-bar backgroundColor="primary">
+                <a mat-tab-link
+                 routerLink="/acceuil" class="tablink w3-blanc "  >
+                 Acceuil
+               </a>
+               <a mat-tab-link
+                 [matMenuTriggerFor] = "pr" class="tablink w3-blanc" routerLink="/presentation" >
+                 Presentation
+               </a>
+               <mat-menu #pr ='matMenu'>
+                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/souspresentation" >Qui sommes nous</a>
+                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/prospectus" >Prospectus</a>
+                <a mat-menu-item class="tablink w3-blanc" routerLink="/presentation/emplacement" >Emplacement</a>
+              </mat-menu>
+              <a mat-tab-link
+                 [matMenuTriggerFor] = "m1" routerLink="/nosee" class="tablink w3-blanc" >
+                 Nos EE
+               </a>
+               <mat-menu #m1 ="matMenu">
+                <a mat-menu-item [matMenuTriggerFor] = "elan" routerLink="/nosee/elan" class="tablink w3-blanc" >ELAN</a>
+                <a mat-menu-item [matMenuTriggerFor] = "pes" routerLink="/nosee/pes"  class="tablink w3-blanc" >PES</a>
+              </mat-menu>
+              <mat-menu #elan ="matMenu">
+                <a mat-menu-item routerLink="/nosee/elan/finance" class="tablink w3-blanc" >Finance</a>
+                <a mat-menu-item routerLink="/nosee/elan/rh" class="tablink w3-blanc" >RH</a>
+                <a mat-menu-item routerLink="/nosee/elan/comptabilite" class="tablink w3-blanc" >Comptabilité</a>
+                <a mat-menu-item routerLink="/nosee/elan/commerce" class="tablink w3-blanc" >Commerce</a>
+             </mat-menu>
+             <mat-menu #pes ="matMenu">
+                <a mat-menu-item routerLink="/nosee/pes/marketing" class="tablink  w3-blanc" >Marketing</a>
+                <a mat-menu-item routerLink="/nosee/pes/developpement" class="tablink  w3-blanc" >Developpement</a>
+                <a mat-menu-item routerLink="/nosee/pes/design"  class="tablink  w3-blanc" >Design</a>
+             </mat-menu>
+             <a mat-tab-link
+             routerLink="/partenariats" class="tablink  w3-blanc" >
+             partenariats
+             </a>
+             <a mat-tab-link
+             routerLink="/actualites"  [fragment]="'target'">
+             Actualités
+             </a>
+             <a mat-tab-link
+             routerLink="/ressource" class="tablink  w3-blanc" >
+             Ressources
+             </a>
+             <a mat-tab-link
+             [matMenuTriggerFor] = "media" routerLink="/medias" class="tablink  w3-blanc" >
+             Médias
+           </a>
+           <mat-menu #media ="matMenu">
+            <a mat-menu-item routerLink="/medias/photos" class="tablink  w3-blanc" >Galeries photos</a>
+            <a mat-menu-item routerLink="/medias/press" class="tablink  w3-blanc" >Presse</a>
+            <a mat-menu-item routerLink="/medias/videos" class="tablink  w3-blanc" >vidéos</a>
+           </mat-menu>
+           <a mat-tab-link
+           [matMenuTriggerFor]  = "candidat" routerLink="/candidature" class="tablink  w3-blanc">Candidatures</a>
+           <mat-menu #candidat ="matMenu">
+            <a mat-menu-item routerLink="/candidature/offre" class="tablink  w3-blanc" >offre d'emploi</a>
+            <a mat-menu-item routerLink="/candidature/postules" class="tablink  w3-blanc" >postuler pour offre</a>
+           </mat-menu>
+           <a mat-tab-link
+             routerLink="/contact" class="tablink w3-blanc" (click)="addoffre()">
+             Contact
+             </a>
+            </nav>
+          
+        </mat-toolbar-row>
+</mat-toolbar>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+
+ <h1 class="cs-color">
+    <span class="material-icons">
+    camera_enhance
+    </span>
+    Galerie photos
+</h1>
+
+<div class="container-fluide">
+  <h2>Evenements</h2>
+   <div class="row">
+        <div class="col-md-12 " >
+      <div *ngFor="let item of crudApi.evenement">
+        <div class="col-md-2" >
+                 <mat-card class="example-card">
+                <img class="card-img-top img-responsive"
+                    src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                    style = "height :fil-content;width:fil-content"
+                   alt="">
+                  </mat-card>
+        </div>
+        </div>
+    </div>
+    
+  </div>
+
+ <h2>Ateliers</h2>
+  <div class="row">
+        <div class="col-md-12 " >
+      <div *ngFor="let item of crudApi.atelier">
+        <div class="col-md-2" >
+                 <mat-card class="example-card">
+                <img class="card-img-top img-responsive"
+                    src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                    style = "height :fil-content;width:fil-content"
+                   alt="">
+                  </mat-card>
+        </div>
+        </div>
+    </div>
+    
+  </div>
+
+
+
+</div>
+

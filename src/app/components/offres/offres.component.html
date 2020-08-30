@@ -1,0 +1,39 @@
+
+  <mat-toolbar color="primary">
+    <div>
+      Liste Offres
+    </div>
+    </mat-toolbar>
+ <div class="pricing-header mx-auto ">
+   <div class="table-responsive tabl">
+    <table class="table table-bordered table-responsive-sm table-responsive-md
+   table-responsive-lg">
+    <thead>
+    <tr>
+  
+    <th scope="col">Référence </th>
+    <th scope="col">Nom du Poste</th>
+    <th scope="col">Description du Poste </th>
+    <th scope="col">Date echéances </th>
+    <th colspan="2">
+        Action
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+        
+    <tr *ngFor="let item of crudApi.listData">
+   
+    <td>{{item.reference}}</td>
+    <td>{{item.nomPoste}}</td>
+    <td>{{item.descriptionPoste}}</td>
+    <td>{{item.dateEcheance}}</td>
+    <td><button class="btn btn-warning btn btn-outline-dark ml-1"  (click) = "selectData(item)" [routerLink]="['/admin/editoffre', item.id, 'edit']">
+      <i class="fa fa-pencil-square-o" ></i></button></td>
+   <td><button class="btn btn-danger btn btn-outline-dark ml-1" (click) = "removeData(item.id)">
+      <i class="fa fa-trash-o"></i></button></td>
+    </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>

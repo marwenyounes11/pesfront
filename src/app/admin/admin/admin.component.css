@@ -1,0 +1,46 @@
+
+.logo{
+    margin-right: 25px;
+    margin-left: 25px;
+    color:blanchedalmond;
+
+}
+.logot{
+    margin-right: 25px;
+    margin-left: 25px;
+    color:blanchedalmond; 
+}
+a:hover{
+    background-color: #185fac;
+}
+mat-toolbar{
+   
+    text-align:center;
+    margin-left:15px;
+    margin-right:15px;
+    height: 100px;
+    background-color:#185fac;
+    
+}
+mat-sidenav-container{
+    margin-left:15px;
+    margin-right:15px;
+   
+}
+
+mat-sidenav{
+    padding-left: 15px;
+    background-color: #185fac;
+}
+mat-toolbar-row{
+    margin-top: 20px;
+
+}
+
+span{
+    color:blanchedalmond;  
+}
+
+mat-icon{
+    color:blanchedalmond; 
+}

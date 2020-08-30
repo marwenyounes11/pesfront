@@ -1,0 +1,163 @@
+.contact {
+display: inline;
+padding:10px ;
+}
+
+.suivre {
+    padding-left:20px;
+    
+}
+
+#all{
+    width:100%;
+  }
+  #suivi{
+    width:100%;
+    margin-bottom: 50px;
+   justify-content: center;
+  }
+
+  .fa-twitter {
+    background: #068bf0;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+  .fa-facebook {
+    background: #083e68;
+    color:white;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+  .fa-youtube {
+    background: #7a3202;
+    color:white;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+  .fa-linkedin{
+    background: #024f8a;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+  
+  #footer
+  {
+      background-color:olivedrab;   
+  }
+  .contacter{
+padding-top:15px ;
+padding-right: 15px;
+  }
+
+  .apropos{
+    padding-top:15px ;
+    padding-right: 15px;
+  }
+
+  .speed{
+    padding-top:15px ;
+    padding-right: 15px;
+   
+  
+  }
+  .speed a{
+   color: blue;
+  
+  }
+
+  .apropos a{
+    color: blue;
+   
+   }
+
+  .ouverture{
+    width: 100%;
+   text-align: left;
+  }
+  
+  @media (min-width: 768px) {
+    .container-fluide {
+      min-width: 900px;
+    }
+    .cs-footer-widgets{
+      min-width: 900px;
+    }
+
+    #footer
+  {
+      background-color:olivedrab;  
+      min-width: 1100px; 
+  }
+  #cop{
+    margin-left: 50px;
+    font-size: 10px;
+  }
+  .i{
+    min-width: 150px;
+    min-height:150px;
+  }
+  }
+  @media (min-width: 992px) {
+    .container-fluide {
+      min-width: 1100px;
+    }
+    .cs-footer-widgets{
+     min-width: 1100px;
+    }
+    #footer
+    {
+        background-color:olivedrab;  
+        min-width: 1450px; 
+    }
+    #cop{
+      margin-left: 100px;
+      font-size: 20px;
+    }
+    .i{
+      min-width: 300px;
+      min-height: 300px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-fluide {
+      min-width: 1400px;
+    }
+    .cs-footer-widgets{
+      min-width: 1400px;
+    }
+    #cop{
+      margin-left: 100px;
+      font-size: 20px;
+    }
+    #footer
+    {
+        background-color:olivedrab;  
+        min-width: 1700px; 
+    }
+    .i{
+      min-width: 400px;
+      min-height: 400px;
+    }
+  }

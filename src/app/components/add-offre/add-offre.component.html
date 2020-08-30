@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+      
+  </div>
+  <div>
+  <h1>Gestion Offre d'emploi</h1> 
+  </div>
+</mat-toolbar>
+      <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+          <mat-card-content>
+         
+        <mat-form-field>
+          <mat-label>Réference</mat-label>
+          <input required matInput type="text" placeholder="taper le réference" formControlName="reference" id="reference">
+          <mat-error
+            *ngIf="this.crudApi.dataForm.controls.reference?.errors && (this.crudApi.dataForm.controls.reference?.dirty || this.crudApi.dataForm.controls.reference?.touched)">
+            <div *ngIf="this.crudApi.dataForm.controls.reference?.errors.required">
+              Réference obligatoire
+            </div>
+        </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Nom du poste</mat-label>
+          <input required matInput type="text" placeholder="taper le nom du poste" class="form-control" formControlName="nomPoste" id="nomPoste">
+          <mat-error
+            *ngIf="this.crudApi.dataForm.controls.nomPoste?.errors && (this.crudApi.dataForm.controls.nomPoste?.dirty || this.crudApi.dataForm.controls.nomPoste?.touched)" class="invalid-feedback">
+            <div *ngIf="this.crudApi.dataForm.controls.nomPoste?.errors.required">
+              Nom du poste obligatoire
+            </div>
+        </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description Poste</mat-label>
+            <input required matInput type="text" placeholder="taper la description du poste" class="form-control" formControlName="descriptionPoste" id="descriptionPoste">
+            <mat-error
+            *ngIf="this.crudApi.dataForm.controls.descriptionPoste?.errors && (this.crudApi.dataForm.controls.descriptionPoste?.dirty || this.crudApi.dataForm.controls.descriptionPoste?.touched)">
+            <div *ngIf="this.crudApi.dataForm.controls.descriptionPoste?.errors.required">
+              Description obligatoire
+            </div>
+        </mat-error>
+          </mat-form-field>
+        <mat-form-field>
+            <mat-label>Date Echeance</mat-label>
+            <input  required matInput [matDatepicker]="picker" [min]="minDate" 
+             placeholder="choisir date d'écheance" formControlName="dateEcheance" id="dateEcheance" 
+            readonly (click)="picker.open()">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+       </mat-card-content>
+       <br>
+        <mat-card-actions align="center">
+          <button type="submit" class="btn btn-dark" [mat-dialog-close]="true"><mat-icon>send</mat-icon> Submit</button>
+          <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>
+        </mat-card-actions>
+      </form>
+  

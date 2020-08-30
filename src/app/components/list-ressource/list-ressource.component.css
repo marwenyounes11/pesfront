@@ -1,0 +1,67 @@
+mat-card{
+   height: 200px; 
+   width:200px;
+   margin-bottom: 15px;
+   text-align:center ;
+  
+}
+h1{
+    text-align: center;
+}
+h2{
+margin:10px 10px 10px 10px;
+}
+p{
+padding:1px 1px 1px 1px;
+}
+
+.social-lists{
+    opacity: 0;
+}
+.doc-item:hover .social-lists{
+    margin-top: -4em;
+    opacity: 1;
+    color:red;
+    font-size:30px;
+}
+.r{
+    padding-bottom: 20px;
+}
+
+mat-sidenav{
+    width: 200px;
+    background-color:rgb(71, 78, 89) ;
+}
+h3{
+    color: snow;
+}
+span{
+    color: snow;
+}
+input{
+    background-color: snow;  
+    border-radius: 5px;
+    
+
+}
+mat-sidenav-container{
+    margin:20px 20px 20px 20px;
+    overflow:auto;
+    justify-content: center;
+}
+mat-form-field{
+    padding-left:7px;
+}
+mat-select{
+    background-color: snow;  
+    height:30px; 
+    border-radius: 5px;
+}
+mat-label{
+    color: snow;
+    font-size:20px ;
+}
+
+.pageres{
+    margin-left: 200px;
+}

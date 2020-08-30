@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        
+    </div>
+    <div>
+    <h1>Gestion Statistique</h1> 
+    </div>
+  </mat-toolbar>
+        <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+            <mat-card-content>
+              <mat-form-field>
+                <mat-label>Date Statistique</mat-label>
+                <input  required matInput [matDatepicker]="picker" [min]="minDate" 
+                 placeholder="choisir date de creation du Statistique" formControlName="dateStatistique" id="dateStatistique" 
+                readonly (click)="picker.open()">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+           <br>
+          <mat-form-field>
+            <mat-label>Nombre jeunes Formés</mat-label>
+            <input required matInput type="number" placeholder="taper le nombre des jeunes formés" formControlName="nbFormer" id="nbFormer">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.nbFormer?.errors && (this.crudApi.dataForm.controls.nbFormer?.dirty || this.crudApi.dataForm.controls.nbFormer?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.nbFormer?.errors.required">
+                Nombre jeunes Formés
+              </div>
+          </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>Nombre jeunes Embauchés</mat-label>
+            <input required matInput type="number" placeholder="taper le nombre des jeunes embaucher" formControlName="nbEmbaucher" id="nbEmbaucher">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.nbEmbaucher?.errors && (this.crudApi.dataForm.controls.nbEmbaucher?.dirty || this.crudApi.dataForm.controls.nbEmbaucher?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.nbEmbaucher?.errors.required">
+                Nombre jeunes Embauchés
+              </div>
+          </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>Nombre jeunes Certifiés</mat-label>
+            <input required matInput type="number" placeholder="taper le nombre des jeunes Certifier" formControlName="nbCertifier" id="nbCertifier">
+            <mat-error
+              *ngIf="this.crudApi.dataForm.controls.nbCertifier?.errors && (this.crudApi.dataForm.controls.nbCertifier?.dirty || this.crudApi.dataForm.controls.nbCertifier?.touched)">
+              <div *ngIf="this.crudApi.dataForm.controls.nbCertifier?.errors.required">
+                Nombre jeunes Certifiés
+              </div>
+          </mat-error>
+          </mat-form-field>
+         </mat-card-content>
+         <br>
+         <br>
+          <mat-card-actions align="center">
+            <button type="submit" class="btn btn-dark"><mat-icon>send</mat-icon> Submit</button>
+            <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>
+          </mat-card-actions>
+        </form>

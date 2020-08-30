@@ -1,0 +1,19 @@
+span{
+    font-family: verdana, geneva, sans-serif; 
+    font-size: 14px; 
+    text-align: justify; 
+}
+iframe {
+    text-align: center;
+    margin-left: 150px; 
+}
+.main-section {
+  left:0px;
+  
+}
+p{
+  min-width: 1000px;
+}
+.v{
+  min-width: 700px;
+}

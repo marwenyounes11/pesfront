@@ -1,0 +1,115 @@
+<mat-toolbar color="primary">
+  <div>
+  <h1>postuler votre candidature</h1> 
+  </div>
+</mat-toolbar>
+    <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Nom du candidat</mat-label>
+          <input required matInput type="text" placeholder="taper votre nom" formControlName="nom" id="nom">
+          <mat-error
+            *ngIf="this.crudApi.dataForm.controls.nom?.errors && (this.crudApi.dataForm.controls.nom?.dirty || this.crudApi.dataForm.controls.nom?.touched)">
+            <div *ngIf="this.crudApi.dataForm.controls.nom?.errors.required">
+              Nom obligatoire
+            </div>
+        </mat-error>
+        </mat-form-field>
+       <br> <br>
+        <mat-form-field>
+          <mat-label>Prenom du candidat</mat-label>
+          <input required matInput type="text" placeholder="taper votre prénom" formControlName="prenom" id="prenom">
+          <mat-error
+            *ngIf="this.crudApi.dataForm.controls.prenom?.errors && (this.crudApi.dataForm.controls.prenom?.dirty || this.crudApi.dataForm.controls.prenom?.touched)">
+            <div *ngIf="this.crudApi.dataForm.controls.prenom?.errors.required">
+              Prenom obligatoire
+            </div>
+        </mat-error>
+        </mat-form-field>
+        <br> <br>
+        <mat-form-field appearance="standard">
+          <mat-label>Téléphone du candidat</mat-label>
+          <mat-icon matPrefix>phone</mat-icon>
+          <input required matInput  placeholder="taper votre telephone" formControlName="telephone" id="telephone">
+          <mat-error
+            *ngIf="this.crudApi.dataForm.controls.telephone?.invalid && (this.crudApi.dataForm.controls.telephone.dirty || this.crudApi.dataForm.controls.telephone.touched)">
+            <div *ngIf="this.crudApi.dataForm.controls.telephone?.errors.required">
+                Phone is required.
+            </div>
+            <div *ngIf="this.crudApi.dataForm.controls.telephone?.invalid">
+                telephone invalide il faut commencer par +216 .
+            </div>
+        </mat-error>
+        </mat-form-field>
+        <br> <br> <br>
+        <mat-form-field  class="example-full-width">
+          <mat-label>Email</mat-label>
+          <mat-icon matPrefix>email</mat-icon>
+           <input required matInput type="email" tabindex="1" placeholder="taper votre Email" formControlName="email" id="email">
+           <mat-error
+           *ngIf="this.crudApi.dataForm.controls.email?.invalid && (this.crudApi.dataForm.controls.email.dirty || this.crudApi.dataForm.controls.email.touched)">
+           <div *ngIf="this.crudApi.dataForm.controls.email?.errors.required">
+               Email obligatoire
+           </div>
+           <div *ngIf="this.crudApi.dataForm.controls.email?.invalid">
+               Email  invalide.
+           </div>
+          </mat-error>
+        </mat-form-field>
+        <br> <br> <br>
+       
+        <mat-form-field appearance="fill">
+          <mat-label>Type</mat-label>
+          <mat-select formControlName="type"  required>
+            <mat-option value="spontane">
+              spontane
+            </mat-option>
+            <mat-option value="non-spontane">
+              non-spontane
+            </mat-option>
+          </mat-select>
+          <mat-error
+          *ngIf="this.crudApi.dataForm.controls.type?.invalid && (this.crudApi.dataForm.controls.type.dirty || this.crudApi.dataForm.controls.type.touched)">
+          <div *ngIf="this.crudApi.dataForm.controls.type.errors.required">
+            Type obligatoire
+          </div>
+          </mat-error>
+        </mat-form-field>
+      
+        <br> <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Offre</mat-label>
+          <mat-select formControlName="idOffre"  required>
+            <mat-option *ngFor="let o of  listOffre" [value]="o.id">
+              {{o.reference}}
+            </mat-option>
+            
+          </mat-select>
+          <mat-error
+          *ngIf="this.crudApi.dataForm.controls.type?.invalid && (this.crudApi.dataForm.controls.type.dirty || this.crudApi.dataForm.controls.type.touched)">
+          <div *ngIf="this.crudApi.dataForm.controls.type.errors.required">
+           Offre obligatoire
+          </div>
+          </mat-error>
+        </mat-form-field>
+        <br> <br>
+      <div class="form-group">
+          <label>cv Upload  </label> <br>
+              <input type="file" accept="pdf/*" (change)="onSelectFile1($event)">
+              <img [src]="imgURL1" height="200" *ngIf="imgURL1">
+      </div>
+
+      <div class="form-group">
+        <label> Diplome Upload  </label> <br>
+            <input type="file" accept="pdf/*" (change)="onSelectFile2($event)">
+            <img [src]="imgURL2" height="200" *ngIf="imgURL2">
+    </div>
+  </mat-card-content>
+  <br>
+  <br>
+  <mat-card-actions >
+    <button type="submit" class="btn btn-dark"><mat-icon>send</mat-icon> Submit</button> 
+    <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>
+  </mat-card-actions>
+    </form>
+

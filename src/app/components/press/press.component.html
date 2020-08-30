@@ -1,0 +1,24 @@
+<h1 class="cs-color">
+    <mat-icon>perm_media</mat-icon>
+   photos du press
+</h1>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-12 center" >
+      <div *ngFor="let item of crudApi.press">
+        <div class="col-md-5" >
+            <h3>{{item.titre}}</h3>
+                 <mat-card class="example-card">
+                <img class="card-img-top img-responsive"
+                    src = "{{this.crudApi.host+'/api/Imgmedias/'+item.id}}" 
+                    style = "height :300px"
+                   alt="">
+                  </mat-card>
+        </div>
+        </div>
+    </div>
+    
+  </div>
+  <div>

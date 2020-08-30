@@ -1,0 +1,25 @@
+
+
+mat-card-content{
+    text-align:center;
+}
+mat-card{
+   width:200px;
+   
+}
+.card{
+    width:200px;
+    margin-left: 15px;
+   margin-bottom: 5px;
+}
+.corp{
+    overflow: auto;
+}
+ngx-slick-carousel{
+    width:800px;
+    margin:2px 2px 2px 2px ;
+}
+.slide{
+    height: 400px;
+    scroll-margin-right: 3px;
+}

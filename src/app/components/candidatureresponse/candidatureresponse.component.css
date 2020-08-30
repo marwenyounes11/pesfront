@@ -1,0 +1,14 @@
+p{
+    margin-left: 200px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: large;
+    font-weight: bold;
+}
+
+img{
+    margin-left: 400px;  
+    margin-bottom: 25px;
+    width: 500px;
+    height: 300px;
+}

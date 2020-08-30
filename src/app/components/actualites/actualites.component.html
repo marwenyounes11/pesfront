@@ -1,0 +1,49 @@
+<div class="container-fluide"  >
+    <div class="row">
+      <main class="col-md-9" >
+        <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        >
+                  <div  ngxSlickItem  *ngFor="let item of crudApi.listData" class="slide">
+            <div  class="col-md-4 " >
+                <mat-card class="card1">
+                    <img class="card-img-top img-responsive imag"
+                        src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
+                       alt="">
+                      
+                    <mat-card-content>
+                        <p>{{item.titre}}</p>
+                        <a [routerLink]="['/detailarticle', item.id]" >lire la suite <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </mat-card-content>
+                   
+                  </mat-card>
+            </div>
+        </div>
+      </ngx-slick-carousel>
+      
+      </main>
+      <div class="bg-light border-right col-md-3 side" id="sidebar-wrapper">
+            <h2>Les derniers actualités</h2>
+        <div class="list-group list-group-flush" *ngFor="let item of crudApi.lastData">
+          <div>
+            <mat-card class=" card">
+                <img class="card-img-top img-responsive im"
+                    src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
+                   alt="">
+                  
+                <mat-card-content>
+                    <p>{{item.titre}}</p>
+                    <a [routerLink]="['/detailarticle', item.id]" >lire la suite <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </mat-card-content>
+                
+              </mat-card>
+           
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+

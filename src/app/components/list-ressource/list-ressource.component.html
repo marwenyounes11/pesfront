@@ -1,0 +1,49 @@
+<h1>Les ressources humaines de ELAN/PES</h1>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened="true">
+  <h3>Chercher une Ressource </h3> 
+  <span>Filtrer votre recherche</span>
+  <br> <br>
+  <mat-form-field>
+    <input  matInput type="text" placeholder="taper le nom de ressource" [(ngModel)]="listFilter">
+  </mat-form-field>
+  </mat-sidenav>
+
+  <mat-sidenav-content *ngIf="ressources && ressources.length">
+    <div class=cotainer>
+      <div class="row r">
+           <div class="col-md-12 " >
+         <div *ngFor="let item of pageOfItems">
+           <div class="col-md-4  doc-item" >
+                    <mat-card class="example-card">
+                   <img class="card-img-top img-responsive"
+                       src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
+                       style = "height :fil-content;width:fil-content"
+                      alt="">
+                      
+                      <mat-card-content class="social-lists">
+                          <p><b>{{item.nom}}</b></p>
+                          <p><b>{{item.prenom}}</b></p>
+                          <p><b>{{item.type}}</b></p>
+                      </mat-card-content>
+                     
+                     </mat-card>
+                     <a [routerLink]="['/detailressource', item.id]" >visiter page personnelle</a>
+           </div>
+           </div>
+       </div>
+       
+      </div>
+      
+     </div>
+     <div *ngIf="filteredRessource && filteredRessource.length; then thenBlock else elseBlock"></div>
+<ng-template class="pageres" #thenBlock> <jw-pagination  [items]= "filteredRessource"   (changePage)="onChangePage($event)"></jw-pagination></ng-template>
+<ng-template class="pageres" #elseBlock><jw-pagination    [items]="ressources" (changePage)="onChangePage($event)"></jw-pagination></ng-template>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+    
+ 
+
+
+
+

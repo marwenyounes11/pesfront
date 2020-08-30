@@ -1,0 +1,20 @@
+.rows{
+    margin:50px 50px 20px 20px ;   
+}
+.content{
+    margin-bottom:20px  ;  
+    margin-top: 20px;
+}
+.title{
+    margin:50px 50px 50px 50px ; 
+}
+.affichage{
+    display: inline;
+}
+img{
+    vertical-align: middle;
+}
+mat-card{
+    height: 350px;
+    
+}

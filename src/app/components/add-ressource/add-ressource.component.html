@@ -1,0 +1,102 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs>
+        
+    </div>
+    <div>
+    <h1>Gestion Ressource</h1> 
+    </div>
+</mat-toolbar>
+
+    <form  id="f" [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input required matInput type="text" placeholder="taper le nom" formControlName="nom" id="nom">
+      </mat-form-field>
+     <br>
+      <mat-form-field>
+        <mat-label>Prenom</mat-label>
+        <input required matInput type="text" placeholder="taper le prenom" formControlName="prenom" id="prenom">
+      </mat-form-field>
+      <br>
+      <mat-form-field  class="example-full-width">
+        <mat-label>Email</mat-label>
+        <mat-icon matPrefix>email</mat-icon>
+         <input required matInput type="email" tabindex="1" placeholder="taper  Email" formControlName="email" id="email">
+         <mat-error
+         *ngIf="this.crudApi.dataForm.controls.email?.invalid && (this.crudApi.dataForm.controls.email.dirty || this.crudApi.dataForm.controls.email.touched)">
+         <div *ngIf="this.crudApi.dataForm.controls.email?.errors.required">
+             Email obligatoire
+         </div>
+         <div *ngIf="this.crudApi.dataForm.controls.email?.invalid">
+             Email  invalide.
+         </div>
+        </mat-error>
+      </mat-form-field>
+      <br> 
+      <mat-form-field appearance="standard">
+        <mat-label>Téléphone </mat-label>
+        <mat-icon matPrefix>phone</mat-icon>
+        <input required matInput  placeholder="taper  telephone" formControlName="telephone" id="telephone">
+        <mat-error
+          *ngIf="this.crudApi.dataForm.controls.telephone?.invalid && (this.crudApi.dataForm.controls.telephone.dirty || this.crudApi.dataForm.controls.telephone.touched)">
+          <div *ngIf="this.crudApi.dataForm.controls.telephone?.errors.required">
+              Phone is required.
+          </div>
+          <div *ngIf="this.crudApi.dataForm.controls.telephone?.invalid">
+              Phone is invalid.
+          </div>
+      </mat-error>
+      </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea required matInput placeholder="taper le description" formControlName="description" id="description"></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type"  required>
+          <mat-option value="coach">
+            coach
+          </mat-option>
+          <mat-option value="ctp">
+           ctp
+          </mat-option>
+          <mat-option value="manager">
+           manager
+           </mat-option>
+        </mat-select>
+        <mat-error
+        *ngIf="this.crudApi.dataForm.controls.type?.invalid && (this.crudApi.dataForm.controls.type.dirty || this.crudApi.dataForm.controls.type.touched)">
+        <div *ngIf="this.crudApi.dataForm.controls.type.errors.required">
+          Type obligatoire
+        </div>
+        </mat-error>
+      </mat-form-field>
+      <br>
+    <!-- 
+   <mat-form-field>
+      <ngx-mat-file-input  placeholder="Basic Input" (change)="onSelectFile($event)">
+      </ngx-mat-file-input>
+    </mat-form-field> -->
+    
+
+    <div class="form-group img">
+      <label>Upload Image </label> <br>
+          <input style="width: 500px;" class=" telecharger" type="file" accept="image/*" (change)="onSelectFile1($event)"> <br>
+          <img  [src]="imgURL1" height="200" *ngIf="imgURL1">
+  </div> 
+
+  <div class="form-group cv">
+    <label>Upload CV </label> <br>
+        <input style="width: 500px;" class=" telecharger" type="file" accept="pdf/*" (change)="onSelectFile2($event)"> <br>
+        <img  [src]="imgURL2" height="200" *ngIf="imgURL2">
+</div>    
+    </mat-card-content>
+    <br> 
+    <mat-card-actions align="center">
+        <button type="submit" class="btn btn-dark"><mat-icon>send</mat-icon> Submit</button>
+        <button type="reset" class="btn btn-dark"><mat-icon>close</mat-icon>Annuler</button>
+    </mat-card-actions>
+    </form>

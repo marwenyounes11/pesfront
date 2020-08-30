@@ -1,0 +1,15 @@
+<h1 *ngIf="article">{{article.titre}}</h1>
+<p id ="dateart"><i class="fa fa-calendar" aria-hidden="true"></i> {{article.date}}  </p>
+
+<mat-card  class="example-card">
+    <img class="card-img-top img-responsive"
+        src = "{{host+'/api/Imgarticles/'+article.id}}" 
+        style = "height :400px;width:400px"
+       alt="{{article.titre}}">
+      
+    <mat-card-content>
+        <p><i class="fa fa-user aut" aria-hidden="true"></i><b> <span class="aute">AUTEUR:</span>  {{article.auteur}} </b></p>
+        <p class="corp"><i class="fa fa-align-justify des" aria-hidden="true"></i> <span class="descr">DESCRIPTION:</span> {{article.corps}} </p>
+    </mat-card-content>
+   
+  </mat-card>

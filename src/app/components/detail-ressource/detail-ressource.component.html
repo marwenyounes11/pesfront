@@ -1,0 +1,22 @@
+<div class=" container">
+  <div class="row">
+    <div class="col-md-10">
+<h1>{{ressource.nom}} {{ressource.prenom}} </h1>
+</div>
+<div class="col-md-2">
+  <a [routerLink]="['/cv', ressource.id]" ><i class="fa fa-download" aria-hidden="true"></i> Curriculum vitae</a>
+  </div>
+</div>
+</div>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <img class="card-img-top img-responsive"
+                       src = "{{host+'/api/Imgressources/'+ressource.id}}" 
+                       style = "height :200px;width:200px"
+                      alt="">
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>{{ressource.description}}</p>
+    </mat-sidenav-content>
+</mat-sidenav-container>

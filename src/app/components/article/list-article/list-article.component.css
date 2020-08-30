@@ -1,0 +1,60 @@
+@media (min-width: 768px) {
+    .tabl{
+
+        margin-left:30px ;
+        margin-right:30px ;
+        margin-bottom: 60px;
+        
+        }
+        
+        mat-toolbar{
+            margin-top: 50px;
+            margin-left:50px ;
+            margin-right:50px ;
+            width: 800px;
+        }
+        table{
+            width: 800px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .tabl{
+    
+            margin-left:50px ;
+            margin-right:50px ;
+            margin-bottom: 80px;
+            
+            }
+            
+            mat-toolbar{
+                margin-top: 50px;
+                margin-left:50px ;
+                margin-right:50px ;
+                width: 1000px;
+            }
+            table{
+                width: 1000px;
+            }
+        }
+
+
+        @media (min-width: 1200px) {
+            .tabl{
+        
+                margin-left:70px ;
+                margin-right:70px ;
+                margin-bottom: 100px;
+                
+                }
+                
+                mat-toolbar{
+                    margin-top: 70px;
+                    margin-left:70px ;
+                    margin-right:70px ;
+                    width: 1300px;
+                }
+                table{
+                    width: 1300px;
+                }
+            }

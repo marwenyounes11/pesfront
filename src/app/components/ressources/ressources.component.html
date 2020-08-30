@@ -1,0 +1,29 @@
+<div class="container-fluid ">
+    <div class="row ">
+      <main class="col-md-12">
+        <div *ngFor="let item of crudApi.listData">
+            <div class="col-md-3 " >
+                <mat-card class="example-card">
+                    <img class="card-img-top img-responsive"
+                        src = "{{this.crudApi.host+'/api/Imgressources/'+item.id}}" 
+                        style = "height :100px;width:fil-content"
+                       alt="">
+                    <mat-card-content>
+                        <p>{{item.nom}}</p>
+                        <p>{{item.type}}</p>
+                    </mat-card-content>
+                  </mat-card>
+                    <button class="btn btn-warning btn btn-outline-dark ml-1"  (click) = "selectData(item)" [routerLink]="['/admin/editressource', item.id, 'edit']">
+                      <i class="fa fa-pencil-square-o" ></i></button>
+                   <button class="btn btn-danger btn btn-outline-dark ml-1" (click) = "removeData(item.id)">
+                      <i class="fa fa-trash-o"></i></button>
+                   
+                
+            </div>
+        </div>
+      </main>
+      
+
+
+    </div>
+  </div>

@@ -1,0 +1,58 @@
+
+ 
+
+<div class="container-fluide"  >
+    <div class="row">
+      <main class="col-md-9" >
+        <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        >
+                  <div  ngxSlickItem  *ngFor="let item of crudApi.listData" class="slide">
+            <div  class="col-md-4 " >
+                <mat-card class="example-card">
+                    <img class="card-img-top img-responsive"
+                        src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
+                        style = "height :150px;width:150px"
+                       alt="">
+                      
+                    <mat-card-content>
+                        <p>{{item.titre}}</p>
+                        <p><b> {{item.auteur}} </b></p>
+                        <p> {{item.date}}  </p>
+                        <p class="corp"> {{item.corps}} </p>
+                    </mat-card-content>
+                   
+                  </mat-card>
+            </div>
+        </div>
+      </ngx-slick-carousel>
+      
+      </main>
+      <div class="bg-light border-right col-md-3 side" id="sidebar-wrapper">
+            <h2>Les derniers actualités</h2>
+        <div class="list-group list-group-flush" *ngFor="let item of crudApi.lastData">
+          <div>
+            <mat-card class=" card">
+                <img class="card-img-top img-responsive"
+                    src = "{{this.crudApi.host+'/api/Imgarticles/'+item.id}}" 
+                    style = "height :100px;width:150px"
+                   alt="">
+                  
+                <mat-card-content>
+                    <p>{{item.titre}}</p>
+                    <p><b> {{item.auteur}} </b></p>
+                    <p> {{item.date}}  </p>
+                    <p class="corp"> {{item.corps}} </p>
+                </mat-card-content>
+                
+              </mat-card>
+           
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
