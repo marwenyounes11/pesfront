@@ -58,20 +58,20 @@ mat-card-content{
         margin:2px 2px 2px 2px ;
     }
     .slide{
-        height: 250px;
+        height: 280px;
         width: 200px;
         scroll-margin-right: 3px;
         text-align: center;
     }
     .card{
-        height: 270px;
-        width: 270px;
+        height: 200px;
+        width: 200px;
         margin-left: 25px;
-        margin-bottom: 8px;
+        margin-bottom: 15px;
         margin-top: 8px;
     }
     .card1{
-        height: 200px;
+        height: 270px;
         width:150px;
         margin-left: 15px;
        margin-bottom: 5px;
@@ -83,12 +83,12 @@ mat-card-content{
     .im{
         height :150px;
         width:150px;
-        padding-left:65px ;
+        padding-left:20px ;
 
     }
     .imag{
         height :100px;
-        width:200px;
+        width:100px;
         padding-left:35px ;
 
     }
@@ -127,12 +127,12 @@ mat-card-content{
     }
     .imag{
         height :100px;
-        width:200px;
+        width:100px;
         padding-left:35px ;
 
     }
     .card1{
-        height: 250px;
+        height: 280px;
         width: 250px;
         margin-left: 15px;
        margin-bottom: 5px;

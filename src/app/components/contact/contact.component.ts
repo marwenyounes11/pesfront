@@ -56,6 +56,7 @@ addData() {
   this.crudApi.createData(this.crudApi.dataForm.value).
   subscribe( data => {
     this.toastr.success( 'Validation Faite avec Success'); 
+    this.crudApi.dataForm.reset();
     this.router.navigate(['/contact']);
   });
 }

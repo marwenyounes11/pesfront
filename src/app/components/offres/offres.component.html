@@ -15,9 +15,7 @@
     <th scope="col">Nom du Poste</th>
     <th scope="col">Description du Poste </th>
     <th scope="col">Date echéances </th>
-    <th colspan="2">
-        Action
-    </th>
+    
     </tr>
     </thead>
     <tbody>
@@ -28,10 +26,7 @@
     <td>{{item.nomPoste}}</td>
     <td>{{item.descriptionPoste}}</td>
     <td>{{item.dateEcheance}}</td>
-    <td><button class="btn btn-warning btn btn-outline-dark ml-1"  (click) = "selectData(item)" [routerLink]="['/admin/editoffre', item.id, 'edit']">
-      <i class="fa fa-pencil-square-o" ></i></button></td>
-   <td><button class="btn btn-danger btn btn-outline-dark ml-1" (click) = "removeData(item.id)">
-      <i class="fa fa-trash-o"></i></button></td>
+    
     </tr>
   </tbody>
   </table>
